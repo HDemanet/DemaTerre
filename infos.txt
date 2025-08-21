@@ -1,0 +1,103 @@
+dematerre-website/
+│
+├── index.html                              ← Page d'accueil
+├── amenagement-parcs-jardins.html         ← Service 1
+├── abattage-elagage.html                  ← Service 2
+├── travaux-forestiers-agricoles.html     ← Service 3
+├── a-propos.html                          ← À propos Louis Demanet
+├── contact.html                           ← Contact + formulaire
+├── mentions-legales.html                  ← Mentions légales
+├── politique-confidentialite.html        ← RGPD
+├── accessibilite.html                     ← Déclaration accessibilité
+│
+├── css/
+│   ├── base.css                          ← Reset + variables CSS
+│   ├── components.css                    ← Composants (navbar, footer, boutons, cartes)
+│   ├── layout.css                        ← Mise en page (grid, flexbox, sections)
+│   ├── pages.css                         ← Styles spécifiques aux pages
+│   ├── responsive.css                    ← Media queries
+│   └── utilities.css                     ← Classes utilitaires
+│
+├── js/
+│   ├── components/
+│   │   ├── navbar.js                     ← Composant navbar réutilisable
+│   │   ├── footer.js                     ← Composant footer réutilisable
+│   │   └── modal.js                      ← Système de modales
+│   ├── main.js                          ← JavaScript principal
+│   ├── cookies.js                       ← Gestion RGPD simplifiée
+│   └── forms.js                         ← Validation formulaires
+│
+├── components/
+│   ├── navbar.html                      ← Template navbar
+│   ├── footer.html                      ← Template footer
+│   └── head.html                        ← Template <head>
+│
+├── images/
+│   ├── logo/
+│   │   ├── dematerre-logo.png
+│   │   ├── dematerre-logo.svg
+│   │   └── favicon.ico
+│   ├── services/
+│   │   ├── amenagement/
+│   │   ├── abattage/
+│   │   └── forestier/
+│   ├── gallery/
+│   │   ├── projet-1.jpg
+│   │   ├── projet-2.jpg
+│   │   └── projet-3.jpg et suivants
+│   ├── hero/
+│   │   ├── hero-home.jpg
+│   │   └── hero-services.jpg
+│   └── about/
+│       └── louis-demanet.jpg
+│
+├── assets/
+│   ├── sitemap.xml
+│   ├── robots.txt
+│
+├── docs/
+│   ├── README.md
+│   ├── DEPLOYMENT.md
+│   └── ACCESSIBILITY.md
+
+
+PHILOSOPHIE DE DESIGN :
+======================
+
+1. INSPIRATION TREE-GARDEN :
+   - Hero sections avec images de fond
+   - Cartes services avec hover effects
+   - Palette verte naturelle + orange chaleureux
+   - Typographie claire et espacement généreux
+   - Photos de qualité (à ajouter)
+
+2. COMPOSANTS RÉUTILISABLES :
+   - Navbar/Footer dans des fichiers separes pour eviter de se repeter
+   - Système de templates pour éviter la duplication
+   - Classes CSS modulaires et cohérentes
+   - Animations subtiles et fluides
+
+3. ACCESSIBILITÉ INTÉGRÉE :
+   - Pas de boutons/contrôles supplémentaires
+   - Contrastes respectés dès la conception
+   - Structure sémantique HTML5 native
+   - Navigation clavier fluide
+   - Textes alternatifs et ARIA intégrés
+
+4. PERFORMANCE :
+   - CSS organisé par couches logiques
+   - JavaScript modulaire et lazy-loading
+   - Images optimisées (WebP + fallback)
+   - Critical CSS inline
+
+5. COULEURS DEMATERRE :
+   - Primary: #B55232 (Orange-brun terre cuite)
+   - Secondary: #8EB36A (Vert tendre nature)
+   - Tertiary: #44725C (Vert foncé forêt)
+   - Neutrals: Gamme de gris ou beiges chauds
+
+PROCHAINES ÉTAPES :
+==================
+1. Créer tous les fichiers HTML avec templates
+2. Développer le système CSS modulaire
+3. Implémenter les composants JavaScript

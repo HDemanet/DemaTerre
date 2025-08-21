@@ -1,0 +1,192 @@
+/* =========================
+   PAGES.CSS
+   Styles spécifiques aux pages
+   ========================= */
+
+/* =========================
+   ACCUEIL
+   ========================= */
+.services h2,
+.about h2,
+.galerie h2,
+.atouts h2 {
+  margin-bottom: 2.5rem;
+}
+
+/* Services */
+.services .service-card h3 {
+  margin-top: 1rem;
+  font-size: 1.3rem;
+  color: var(--color-tertiary);
+}
+
+.services .service-card p {
+  font-size: 0.95rem;
+  color: var(--color-muted);
+}
+
+/* Galerie */
+.galerie {
+  background: var(--color-bg);
+  text-align: center;
+}
+
+.galerie h2 {
+  margin-bottom: 2rem;
+}
+
+.galerie .slider-galerie {
+  margin-bottom: 2rem;
+}
+
+/* Atouts */
+.atouts {
+  background: var(--color-light);
+}
+
+.atouts .atout h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-tertiary);
+}
+
+.atouts .atout p {
+  color: var(--color-muted);
+}
+
+/* =========================
+   À PROPOS
+   ========================= */
+.about {
+  background: var(--color-bg);
+}
+
+.about h2 {
+  margin-bottom: 1rem;
+}
+
+.about-content p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: var(--color-text);
+}
+
+.about-content .btn {
+  margin-top: 1rem;
+}
+
+/* =========================
+   SERVICES (pages dédiées)
+   ========================= */
+.page-service header {
+  background: var(--color-tertiary);
+  color: var(--color-light);
+  padding: 4rem 1.5rem;
+  text-align: center;
+}
+
+.page-service header h1 {
+  font-size: 2.5rem;
+  color: var(--color-light);
+}
+
+.page-service section {
+  padding: 4rem 0;
+}
+
+.page-service .intro {
+  max-width: 800px;
+  margin: 0 auto 3rem auto;
+  text-align: center;
+  color: var(--color-text);
+}
+
+/* =========================
+   CONTACT
+   ========================= */
+.contact-page {
+  background: var(--color-bg);
+  padding: var(--spacing-section) 0;
+}
+
+.contact-page h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.contact-info {
+  padding: 2rem;
+}
+
+.contact-info p {
+  margin-bottom: 1rem;
+}
+
+.contact-form {
+  background: var(--color-light);
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--color-tertiary);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  margin-bottom: 1rem;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--color-secondary);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(111,160,110,0.3);
+}
+
+.contact-form button {
+  width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================
+   MENTIONS LÉGALES / POLITIQUE
+   ========================= */
+.legal-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+  line-height: 1.6;
+}
+
+.legal-page h1,
+.legal-page h2 {
+  margin-bottom: 1rem;
+}
+
+.legal-page p {
+  margin-bottom: 1rem;
+  color: var(--color-text);
+}
