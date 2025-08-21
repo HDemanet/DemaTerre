@@ -1,0 +1,13 @@
+{
+  "name": "dematerre-website",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "live-server . --port=3000 --open=/index.html",
+    "test": "echo 'Tests OK'"
+  },
+  "keywords": ["website", "jardinage", "dematerre"],
+  "author": "Louis Demanet",
+  "license": "ISC",
+  "description": "Site web DemaTerre - Aménagement jardins & travaux forestiers"
+}

@@ -3,14 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DemaTerre - Aménagement Parcs et Jardins, Abattage-Élagage, Travaux Forestiers | Louis Demanet</title>
-  <meta name="description" content="DemaTerre, entreprise familiale spécialisée dans l’aménagement de jardins, l’élagage et les travaux forestiers. Louis Demanet, enraciné dans la terre de son enfance, met son savoir-faire au service de vos espaces verts. Devis gratuit au 0488 06 70 63.">
+  <title>DemaTerre - Travail soigné, conseil honnête | Jardins, Élagage, Travaux forestiers en Wallonie</title>
+  <meta name="description" content="DemaTerre : aménagement de jardins, élagage et travaux forestiers en Wallonie. Nous prenons soin de vos espaces verts sans prétention, avec l'expérience du terrain. Devis gratuit au 0488 06 70 63.">
 
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="images/logo/favicon.ico">
 
   <!-- FontAwesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Slick Carousel CSS -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
 
   <!-- CSS -->
   <link rel="stylesheet" href="css/base.css">
@@ -20,166 +29,396 @@
   <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
-  <!-- Header -->
-  <header class="header">
-    <div class="container flex-between">
-      <a href="index.html" class="logo">
-        <img src="images/logo/dematerre-logo.svg" alt="Logo DemaTerre" width="200" height="60">
-      </a>
-      <nav class="nav" id="navigation">
-        <ul class="nav-list">
-          <li><a href="index.html" class="active">Accueil</a></li>
-          <li><a href="amenagement-parcs-jardins.html">Espaces verts</a></li>
-          <li><a href="abattage-elagage.html">Abattage & Élagage</a></li>
-          <li><a href="travaux-forestiers-agricoles.html">Travaux forestiers</a></li>
-          <li><a href="a-propos.html">À propos</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-      <div class="cta-header">
-        <a href="tel:+32488067063" class="btn btn-primary"><i class="fas fa-phone"></i> 0488 06 70 63</a>
+  <!-- Skip link pour accessibilité -->
+  <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+  <!-- Header avec navbar lisible -->
+  <header class="header" role="banner">
+    <div class="container">
+      <div class="header-content">
+        <a href="index.html" class="logo" aria-label="DemaTerre - Retour à l'accueil">
+          <img src="images/logo/dematerre-logo.png" alt="Logo DemaTerre" width="200" height="60">
+        </a>
+
+        <nav class="nav" aria-label="Navigation principale" id="navigation">
+          <ul class="nav-list">
+            <li><a href="index.html" class="link-clean active" aria-current="page">Accueil</a></li>
+            <li><a href="amenagement-parcs-jardins.html" class="link-clean">Aménagement parcs & jardins</a></li>
+            <li><a href="abattage-elagage.html" class="link-clean">Abattage & élagage</a></li>
+            <li><a href="travaux-forestiers-agricoles.html" class="link-clean">Travaux forestiers & agricoles</a></li>
+            <li><a href="a-propos.html" class="link-clean">À propos</a></li>
+            <li><a href="contact.html" class="link-clean">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- Navigation mobile toggle -->
+        <button class="nav-toggle" aria-label="Ouvrir le menu de navigation" aria-expanded="false">
+          <span></span>
+        </button>
+
+        <!-- CTA permanent avec téléphone -->
+        <div class="cta-header hidden-mobile">
+          <a href="tel:+32488067063" class="phone-number" aria-label="Téléphoner à DemaTerre">
+            <i class="fas fa-phone" aria-hidden="true"></i>
+            0488 06 70 63
+          </a>
+          <a href="contact.html" class="btn btn-primary">
+            Devis gratuit
+          </a>
+        </div>
       </div>
+
+      <!-- Navigation mobile avec contact -->
+      <nav class="nav-mobile" aria-label="Navigation mobile" id="nav-mobile">
+        <ul class="nav-list">
+          <li><a href="index.html" class="link-clean active" aria-current="page">Accueil</a></li>
+          <li><a href="amenagement-parcs-jardins.html" class="link-clean">Aménagement</a></li>
+          <li><a href="abattage-elagage.html" class="link-clean">Élagage</a></li>
+          <li><a href="travaux-forestiers-agricoles.html" class="link-clean">Travaux forestiers</a></li>
+          <li><a href="a-propos.html" class="link-clean">À propos</a></li>
+          <li><a href="contact.html" class="link-clean">Contact</a></li>
+        </ul>
+
+        <!-- Contact dans menu mobile -->
+        <div class="nav-mobile-contact">
+          <a href="contact.html" class="btn btn-primary">Devis gratuit</a>
+          <a href="tel:+32488067063" class="phone-number">
+            <i class="fas fa-phone" aria-hidden="true"></i>
+            0488 06 70 63
+          </a>
+        </div>
+      </nav>
     </div>
   </header>
 
-  <!-- Hero -->
-  <section class="hero-slider">
-    <div class="slider">
-      <div><img src="images/hero/hero1.jpg" alt="Aménagement de jardin naturel"></div>
-      <div><img src="images/hero/hero2.jpg" alt="Élagage en toute sécurité"></div>
-      <div><img src="images/hero/hero3.jpg" alt="Travaux forestiers en Wallonie"></div>
-    </div>
-    <div class="hero-overlay">
-      <div class="hero-content">
-        <h1>DemaTerre<br><span>Un travail franc et soigné, proche de la nature</span></h1>
-        <p>Louis Demanet, enraciné dans la terre familiale, met son expérience et son attention au service de vos jardins et espaces verts.</p>
-        <div class="hero-actions">
-          <a href="contact.html" class="btn btn-primary btn-lg">Demander un devis gratuit</a>
-          <a href="tel:+32488067063" class="btn btn-secondary btn-lg">Appeler maintenant</a>
+  <!-- Contenu principal -->
+  <main id="main-content" role="main">
+    <!-- Hero Slider -->
+    <section class="hero-slider" aria-label="Présentation DemaTerre">
+      <div class="slider" role="img" aria-label="Images des services DemaTerre">
+        <div>
+          <img src="images/hero/hero1.jpg" alt="Aménagement de jardin avec plantations adaptées au terrain">
+        </div>
+        <div>
+          <img src="images/hero/hero2.jpg" alt="Élagage professionnel effectué par notre équipe">
+        </div>
+        <div>
+          <img src="images/hero/hero3.jpg" alt="Travaux forestiers réalisés en Wallonie">
         </div>
       </div>
-    </div>
-  </section>
+      <div class="hero-overlay">
+        <div class="hero-content">
+          <h1>
+            DemaTerre
+            <span>Travail soigné, conseil honnête</span>
+          </h1>
+          <p>Nous prenons soin de vos espaces verts en Wallonie. Sans prétention, avec l'expérience du terrain.</p>
+          <div class="hero-actions">
+            <a href="contact.html" class="btn btn-primary btn-lg">
+              <i class="fas fa-edit" aria-hidden="true"></i>
+              Devis gratuit
+            </a>
+            <a href="tel:+32488067063" class="btn btn-secondary btn-lg">
+              <i class="fas fa-phone" aria-hidden="true"></i>
+              0488 06 70 63
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <!-- Services -->
-  <section class="services">
-    <div class="container">
-      <h2>Nos services</h2>
-      <div class="services-grid">
-        <article class="service-card">
-          <i class="fas fa-seedling"></i>
-          <h3>Aménagement de jardins</h3>
-          <p>Créer des espaces verts simples, beaux et adaptés à votre quotidien.</p>
-          <a href="amenagement-parcs-jardins.html" class="link">En savoir plus</a>
-        </article>
-        <article class="service-card">
-          <i class="fas fa-tree"></i>
-          <h3>Abattage & Élagage</h3>
-          <p>Entretenir, sécuriser et soigner vos arbres avec précision et respect.</p>
-          <a href="abattage-elagage.html" class="link">En savoir plus</a>
-        </article>
-        <article class="service-card">
-          <i class="fas fa-tractor"></i>
-          <h3>Travaux forestiers</h3>
-          <p>Valoriser et entretenir vos terrains boisés et agricoles avec sérieux.</p>
-          <a href="travaux-forestiers-agricoles.html" class="link">En savoir plus</a>
-        </article>
-      </div>
-    </div>
-  </section>
+    <!-- Services -->
+    <section class="services section" aria-labelledby="services-title">
+      <div class="container">
+        <div class="section-title">
+          <h2 id="services-title">Ce que nous faisons</h2>
+          <p>Nous travaillons sur différents types de projets en Wallonie. Chaque terrain a ses contraintes, nous nous adaptons.</p>
+        </div>
 
-  <!-- À propos -->
-  <section class="about">
-    <div class="container about-grid">
-      <div class="about-img">
-        <img src="images/about/louis-demanet.jpg" alt="Louis Demanet, fondateur de DemaTerre">
-      </div>
-      <div class="about-content">
-        <h2>À propos</h2>
-        <p>Louis Demanet a grandi proche de la terre, au rythme des saisons et du travail familial. C’est de là que vient son goût du travail franc, de l’attention aux détails et du respect de la nature.</p>
-        <p class="more-text">Avec DemaTerre, il met cette sensibilité au service de l’aménagement, de l’élagage et des travaux forestiers, en Wallonie. Chaque projet est abordé simplement : comprendre vos besoins, travailler avec soin et laisser la nature respirer.</p>
-        <button class="btn btn-outline toggle-about">Lire plus</button>
-      </div>
-    </div>
-  </section>
+        <div class="services-grid">
+          <article class="service-card">
+            <i class="fas fa-seedling" aria-hidden="true"></i>
+            <h3>Aménagement de jardins</h3>
+            <p>Nous aménageons votre jardin selon vos besoins et votre terrain. Chaque situation est différente, nous nous adaptons.</p>
+            <a href="amenagement-parcs-jardins.html" class="link">
+              Voir les détails
+              <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            </a>
+          </article>
 
-  <!-- Galerie -->
-  <section class="galerie">
-    <div class="container">
-      <h2>Quelques réalisations</h2>
-      <div class="slider-galerie">
-        <div><img src="images/gallery/projet-1.jpg" alt="Avant travaux"></div>
-        <div><img src="images/gallery/projet-2.jpg" alt="Après aménagement"></div>
-        <div><img src="images/gallery/projet-3.jpg" alt="Entretien de haies"></div>
-      </div>
-      <a href="realisations.html" class="btn btn-primary">Voir plus de projets</a>
-    </div>
-  </section>
+          <article class="service-card">
+            <i class="fas fa-tree" aria-hidden="true"></i>
+            <h3>Élagage & Abattage</h3>
+            <p>Nous taillons et soignons vos arbres. Le travail se fait en sécurité, avec le matériel adapté.</p>
+            <a href="abattage-elagage.html" class="link">
+              Voir les détails
+              <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            </a>
+          </article>
 
-  <!-- Atouts / Valeurs -->
-  <section class="atouts">
-    <div class="container">
-      <h2>Nos valeurs</h2>
-      <div class="atouts-grid">
-        <div class="atout"><i class="fas fa-leaf"></i><h3>Respect de la nature</h3><p>Un travail qui laisse place au vivant.</p></div>
-        <div class="atout"><i class="fas fa-hands"></i><h3>Attention et soin</h3><p>Chaque détail compte.</p></div>
-        <div class="atout"><i class="fas fa-users"></i><h3>Simplicité</h3><p>Une relation directe et honnête.</p></div>
-        <div class="atout"><i class="fas fa-hammer"></i><h3>Travail bien fait</h3><p>L’expérience et la rigueur du terrain.</p></div>
+          <article class="service-card">
+            <i class="fas fa-tractor" aria-hidden="true"></i>
+            <h3>Travaux forestiers</h3>
+            <p>Nous entretenons vos parcelles forestières et agricoles. Travail adapté à votre situation et vos objectifs.</p>
+            <a href="travaux-forestiers-agricoles.html" class="link">
+              Voir les détails
+              <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            </a>
+          </article>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- CTA -->
-  <section class="cta">
-    <div class="container">
-      <h2>Parlons de votre projet</h2>
-      <p>Un jardin, un arbre, une parcelle à entretenir ? Contactez-moi simplement, je vous répondrai avec plaisir.</p>
-      <div class="cta-actions">
-        <a href="tel:+32488067063" class="btn btn-primary btn-lg">Appeler : 0488 06 70 63</a>
-        <a href="contact.html" class="btn btn-secondary btn-lg">Écrire un message</a>
+    <!-- À propos -->
+    <section class="about section" aria-labelledby="about-title">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-img">
+            <img src="images/about/louis-demanet.jpg" alt="Louis Demanet, fondateur de DemaTerre, dans son environnement de travail">
+          </div>
+          <div class="about-content">
+            <h2 id="about-title">Qui nous sommes</h2>
+            <p>Louis a appris le travail de la terre en famille. Cette expérience nous guide encore aujourd'hui : faire les choses bien, simplement.</p>
+            <div class="more-text">
+              <p>Nous travaillons en Wallonie sur différents projets : jardins, arbres, parcelles forestières. Notre approche : vous écouter, travailler proprement, respecter ce qui existe déjà.</p>
+              <p>Nous connaissons notre métier. L'expérience compte, elle se voit dans le résultat. Pas de baratin technique, nous parlons clairement de ce qui est faisable.</p>
+            </div>
+            <button class="btn btn-outline toggle-about" aria-expanded="false" aria-controls="more-text">
+              Lire plus
+            </button>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <!-- Galerie -->
+    <section class="galerie section section-bg" aria-labelledby="gallery-title">
+      <div class="container">
+        <div class="section-title">
+          <h2 id="gallery-title">Quelques exemples</h2>
+          <p>Voici du travail que nous avons fait récemment en Wallonie.</p>
+        </div>
+
+        <div class="slider-galerie" role="img" aria-label="Galerie des réalisations DemaTerre">
+          <div>
+            <img src="images/gallery/projet-1.jpg" alt="Avant travaux - terrain en friche">
+          </div>
+          <div>
+            <img src="images/gallery/projet-2.jpg" alt="Après aménagement - jardin paysager">
+          </div>
+          <div>
+            <img src="images/gallery/projet-3.jpg" alt="Entretien de haies - taille nette">
+          </div>
+        </div>
+        <div class="text-center mt-xl">
+          <a href="realisations.html" class="btn btn-primary">
+            <i class="fas fa-images" aria-hidden="true"></i>
+            Voir d'autres exemples
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comment nous travaillons -->
+    <section class="atouts section" aria-labelledby="values-title">
+      <div class="container">
+        <div class="section-title">
+          <h2 id="values-title">Comment nous travaillons</h2>
+          <p>Pas de mystère, voici notre façon de faire.</p>
+        </div>
+
+        <div class="atouts-grid">
+          <div class="atout">
+            <i class="fas fa-leaf" aria-hidden="true"></i>
+            <h3>Avec ce qui existe</h3>
+            <p>Nous travaillons avec ce qui est déjà là. Pas contre la nature, avec elle.</p>
+          </div>
+
+          <div class="atout">
+            <i class="fas fa-hands" aria-hidden="true"></i>
+            <h3>En prenant le temps</h3>
+            <p>Nous prenons le temps de bien faire. Les finitions comptent autant que le gros œuvre.</p>
+          </div>
+
+          <div class="atout">
+            <i class="fas fa-users" aria-hidden="true"></i>
+            <h3>En parlant clairement</h3>
+            <p>Nous parlons clairement. Pas de baratin technique, juste ce qu'il faut savoir.</p>
+          </div>
+
+          <div class="atout">
+            <i class="fas fa-hammer" aria-hidden="true"></i>
+            <h3>Avec l'expérience</h3>
+            <p>Nous connaissons notre métier. L'expérience compte, elle se voit dans le résultat.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta section">
+      <div class="container">
+        <h2>Une question ? Un projet ?</h2>
+        <p>Vous avez un jardin à aménager, un arbre qui pose problème, une parcelle à entretenir ? Contactez-nous, nous regardons ensemble ce qui peut se faire.</p>
+        <div class="cta-actions">
+          <a href="tel:+32488067063" class="btn btn-primary btn-lg">
+            <i class="fas fa-phone" aria-hidden="true"></i>
+            Appeler : 0488 06 70 63
+          </a>
+          <a href="contact.html" class="btn btn-secondary btn-lg">
+            <i class="fas fa-envelope" aria-hidden="true"></i>
+            Nous écrire
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <!-- Footer -->
-  <footer class="footer">
-    <div class="container footer-grid">
-      <div class="footer-col">
-        <img src="images/logo/dematerre-logo.svg" alt="DemaTerre logo" width="150">
-        <p>Entreprise familiale en Wallonie, proche de la nature et de ses clients.</p>
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <img src="images/logo/dematerre-logo.svg" alt="Logo DemaTerre" width="150" height="auto">
+          <p>Travail de terrain en Wallonie. Jardins, arbres, parcelles forestières.</p>
+        </div>
+
+        <div class="footer-col">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="amenagement-parcs-jardins.html">Aménagement de jardins</a></li>
+            <li><a href="abattage-elagage.html">Élagage & Abattage</a></li>
+            <li><a href="travaux-forestiers-agricoles.html">Travaux forestiers</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Contact</h3>
+          <ul>
+            <li>Tél : <a href="tel:+32488067063">0488 06 70 63</a></li>
+            <li>Email : <a href="mailto:info@dematerre.be">info@dematerre.be</a></li>
+            <li>Brabant wallon & Namur</li>
+          </ul>
+        </div>
       </div>
-      <div class="footer-col">
-        <h3>Services</h3>
-        <ul>
-          <li><a href="amenagement-parcs-jardins.html">Espaces verts</a></li>
-          <li><a href="abattage-elagage.html">Abattage & Élagage</a></li>
-          <li><a href="travaux-forestiers-agricoles.html">Travaux forestiers</a></li>
-        </ul>
+
+      <div class="footer-bottom">
+        <p>
+          © 2025 DemaTerre - BE 0554.656.490 |
+          <a href="mentions-legales.html">Mentions légales</a> |
+          <a href="politique-confidentialite.html">Confidentialité</a>
+        </p>
       </div>
-      <div class="footer-col">
-        <h3>Contact</h3>
-        <ul>
-          <li>Tél : <a href="tel:+32488067063">0488 06 70 63</a></li>
-          <li>Email : <a href="mailto:info@dematerre.be">info@dematerre.be</a></li>
-          <li>Wallonie - Namur & Liège</li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>© 2025 DemaTerre - BE 0554.656.490 | <a href="mentions-legales.html">Mentions légales</a> | <a href="politique-confidentialite.html">Confidentialité</a> | <a href="accessibilite.html">Accessibilité</a></p>
     </div>
   </footer>
 
   <!-- Scripts -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
   <script>
+    // Script pour header avec background au scroll
+    document.addEventListener('DOMContentLoaded', function() {
+      const header = document.querySelector('.header');
+
+      // Gestion du scroll pour navbar
+      let scrollTimer = null;
+
+      window.addEventListener('scroll', function() {
+        if (scrollTimer !== null) {
+          clearTimeout(scrollTimer);
+        }
+
+        scrollTimer = setTimeout(function() {
+          if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+          } else {
+            header.classList.remove('scrolled');
+          }
+        }, 10);
+      });
+
+      // Navigation mobile
+      const navToggle = document.querySelector('.nav-toggle');
+      const navMobile = document.querySelector('#nav-mobile');
+
+      if (navToggle && navMobile) {
+        navToggle.addEventListener('click', function() {
+          const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+
+          navToggle.classList.toggle('active');
+          navToggle.setAttribute('aria-expanded', !isExpanded);
+          navToggle.setAttribute('aria-label', isExpanded ? 'Ouvrir le menu de navigation' : 'Fermer le menu de navigation');
+
+          navMobile.classList.toggle('active');
+        });
+
+        // Fermer menu mobile sur clic lien
+        navMobile.addEventListener('click', function(e) {
+          if (e.target.tagName === 'A') {
+            navToggle.classList.remove('active');
+            navToggle.setAttribute('aria-expanded', 'false');
+            navMobile.classList.remove('active');
+          }
+        });
+
+        // Fermer menu mobile sur clic extérieur
+        document.addEventListener('click', function(e) {
+          if (!header.contains(e.target)) {
+            navToggle.classList.remove('active');
+            navToggle.setAttribute('aria-expanded', 'false');
+            navMobile.classList.remove('active');
+          }
+        });
+      }
+    });
+
+    // Configuration sliders avec jQuery
     $(document).ready(function(){
-      $('.slider').slick({dots:true, autoplay:true, autoplaySpeed:4000, arrows:false, fade:true});
-      $('.slider-galerie').slick({dots:true, arrows:true, slidesToShow:2, autoplay:true, responsive:[{breakpoint:768, settings:{slidesToShow:1}}]});
+      // Configuration du slider hero
+      $('.slider').slick({
+        dots: true,
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        fade: true,
+        speed: 800,
+        pauseOnHover: true,
+        accessibility: true,
+        focusOnSelect: false
+      });
+
+      // Configuration du slider galerie
+      $('.slider-galerie').slick({
+        dots: true,
+        arrows: true,
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 4000,
+        pauseOnHover: true,
+        accessibility: true,
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 1,
+              arrows: false
+            }
+          }
+        ]
+      });
+
+      // Toggle "Lire plus" accessible
       $('.toggle-about').click(function(){
-        $('.more-text').slideToggle();
-        $(this).text($(this).text() === 'Lire plus' ? 'Lire moins' : 'Lire plus');
+        const $button = $(this);
+        const $moreText = $('.more-text');
+        const isExpanded = $button.attr('aria-expanded') === 'true';
+
+        $moreText.slideToggle(400, function() {
+          $button.attr('aria-expanded', !isExpanded);
+          $button.text(isExpanded ? 'Lire plus' : 'Lire moins');
+        });
       });
     });
   </script>
