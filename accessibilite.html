@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accessibilité - DemaTerre</title>
+  <meta name="description" content="Déclaration d'accessibilité du site DemaTerre. Notre engagement pour un site accessible à tous.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="images/logo/favicon.ico">
+
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css?v=2">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <!-- Skip link pour accessibilité -->
+  <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+  <!-- Header -->
+  <header class="header" role="banner">
+    <div class="container">
+      <div class="header-content">
+        <a href="index.html" class="logo" aria-label="DemaTerre - Retour à l'accueil">
+          <img src="images/logo/dematerre-logo.png" alt="Logo DemaTerre" width="200" height="60">
+        </a>
+
+        <nav class="nav" aria-label="Navigation principale" id="navigation">
+          <ul class="nav-list">
+            <li><a href="index.html" class="link-clean">Accueil</a></li>
+            <li><a href="amenagement-parcs-jardins.html" class="link-clean">Aménagement parcs & jardins</a></li>
+            <li><a href="abattage-elagage.html" class="link-clean">Abattage & Élagage</a></li>
+            <li><a href="travaux-forestiers-agricoles.html" class="link-clean">Travaux forestiers & agricoles</a></li>
+            <li><a href="a-propos.html" class="link-clean">À propos</a></li>
+            <li><a href="contact.html" class="link-clean">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- Navigation mobile toggle -->
+        <button class="nav-toggle" aria-label="Ouvrir le menu de navigation" aria-expanded="false">
+          <span></span>
+        </button>
+
+        <div class="cta-header hidden-mobile">
+          <a href="tel:+32488067063" class="btn btn-primary" aria-label="Appeler DemaTerre">
+            <i class="fas fa-phone" aria-hidden="true"></i>
+            0488 06 70 63
+          </a>
+        </div>
+      </div>
+
+      <!-- Navigation mobile -->
+      <nav class="nav-mobile" aria-label="Navigation mobile" id="nav-mobile">
+        <ul class="nav-list">
+          <li><a href="index.html" class="link-clean">Accueil</a></li>
+          <li><a href="amenagement-parcs-jardins.html" class="link-clean">Aménagement parcs & jardins</a></li>
+          <li><a href="abattage-elagage.html" class="link-clean">Abattage & Élagage</a></li>
+          <li><a href="travaux-forestiers-agricoles.html" class="link-clean">Travaux forestiers & agricoles</a></li>
+          <li><a href="a-propos.html" class="link-clean">À propos</a></li>
+          <li><a href="contact.html" class="link-clean">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Contenu principal -->
+  <main id="main-content" role="main">
+    <!-- Hero simple -->
+    <section class="hero hero-page" style="background: linear-gradient(135deg, var(--color-secondary), var(--color-primary));">
+      <div class="container">
+        <h1>Accessibilité</h1>
+        <p class="hero-subtitle">Notre engagement pour un site accessible à tous</p>
+      </div>
+    </section>
+
+    <!-- Contenu accessibilité -->
+    <section class="section">
+      <div class="container">
+        <div class="container-narrow">
+          <p><strong>Dernière mise à jour : Novembre 2025</strong></p>
+
+          <p>DemaTerre s'engage à rendre son site web accessible à toutes et à tous, conformément aux standards d'accessibilité internationaux (WCAG 2.1).</p>
+
+          <h2>Notre engagement</h2>
+          <p>Nous croyons que l'accessibilité numérique est un droit fondamental. Nous nous efforçons de garantir que notre site soit utilisable par le plus grand nombre, quelles que soient les capacités physiques, sensorielles ou cognitives de chacun.</p>
+
+          <h2>Conformité</h2>
+          <p>Ce site vise à être conforme avec le <strong>niveau AA des WCAG 2.1</strong> (Web Content Accessibility Guidelines). Cela signifie que nous nous efforçons de respecter les critères suivants :</p>
+          <ul>
+            <li><strong>Perceptible</strong> : L'information et les composants de l'interface doivent être présentés de manière à ce qu'ils puissent être perçus par tous</li>
+            <li><strong>Utilisable</strong> : Les composants de l'interface et la navigation doivent être utilisables</li>
+            <li><strong>Compréhensible</strong> : L'information et l'utilisation de l'interface doivent être compréhensibles</li>
+            <li><strong>Robuste</strong> : Le contenu doit être suffisamment robuste pour être interprété de manière fiable par une large variété d'agents utilisateurs, y compris les technologies d'assistance</li>
+          </ul>
+
+          <h2>Mesures d'accessibilité mises en place</h2>
+
+          <h3>Structure et navigation</h3>
+          <ul>
+            <li>Utilisation de balises HTML sémantiques (header, nav, main, footer, section, article)</li>
+            <li>Hiérarchie de titres logique et cohérente</li>
+            <li>Lien d'évitement ("Aller au contenu principal") en début de page</li>
+            <li>Navigation au clavier fonctionnelle sur tous les éléments interactifs</li>
+            <li>Indicateurs de focus visibles</li>
+            <li>Attributs ARIA pour améliorer l'expérience avec les lecteurs d'écran</li>
+          </ul>
+
+          <h3>Contenu</h3>
+          <ul>
+            <li>Contraste des couleurs conforme aux normes AA</li>
+            <li>Taille de police adaptable et lisible</li>
+            <li>Textes alternatifs sur toutes les images importantes</li>
+            <li>Icônes décoratives masquées aux lecteurs d'écran (aria-hidden)</li>
+            <li>Vidéos et contenus multimédias avec alternatives textuelles</li>
+          </ul>
+
+          <h3>Formulaires</h3>
+          <ul>
+            <li>Labels explicites pour tous les champs de formulaire</li>
+            <li>Messages d'erreur clairs et accessibles</li>
+            <li>Instructions et indications d'aide disponibles</li>
+            <li>Champs obligatoires clairement identifiés</li>
+          </ul>
+
+          <h3>Responsive et adaptabilité</h3>
+          <ul>
+            <li>Site entièrement responsive (mobile, tablette, desktop)</li>
+            <li>Zoom jusqu'à 200% sans perte de contenu ou de fonctionnalité</li>
+            <li>Espacement suffisant entre les éléments interactifs (minimum 44x44 pixels)</li>
+          </ul>
+
+          <h2>Technologies utilisées</h2>
+          <p>Ce site web repose sur les technologies suivantes :</p>
+          <ul>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript (avec dégradation gracieuse)</li>
+          </ul>
+
+          <p>Le site est conçu pour fonctionner avec les technologies d'assistance courantes, notamment :</p>
+          <ul>
+            <li>Lecteurs d'écran (NVDA, JAWS, VoiceOver, TalkBack)</li>
+            <li>Logiciels de grossissement</li>
+            <li>Logiciels de reconnaissance vocale</li>
+            <li>Navigation au clavier</li>
+          </ul>
+
+          <h2>Navigateurs et technologies d'assistance compatibles</h2>
+          <p>Ce site a été testé pour fonctionner avec les navigateurs récents :</p>
+          <ul>
+            <li>Google Chrome (dernières versions)</li>
+            <li>Mozilla Firefox (dernières versions)</li>
+            <li>Safari (dernières versions)</li>
+            <li>Microsoft Edge (dernières versions)</li>
+          </ul>
+
+          <p>Compatibilité mobile :</p>
+          <ul>
+            <li>iOS Safari</li>
+            <li>Android Chrome</li>
+          </ul>
+
+          <h2>Limitations connues</h2>
+          <p>Malgré nos efforts, certaines parties du site peuvent présenter des limitations d'accessibilité :</p>
+          <ul>
+            <li>Certaines images de fond décoratives peuvent ne pas avoir d'alternative textuelle (car elles sont décoratives)</li>
+            <li>Les contenus externes (cartes, vidéos embarquées) peuvent ne pas être entièrement sous notre contrôle</li>
+          </ul>
+
+          <p>Nous travaillons continuellement à améliorer l'accessibilité de notre site.</p>
+
+          <h2>Retour d'information et contact</h2>
+          <p>Nous accueillons vos commentaires sur l'accessibilité de notre site. Si vous rencontrez des obstacles à l'accès au contenu de ce site, nous vous invitons à nous le signaler :</p>
+
+          <ul>
+            <li><strong>Par téléphone :</strong> <a href="tel:+32488067063">0488 06 70 63</a></li>
+            <li><strong>Par email :</strong> <a href="mailto:info@dematerre.be">info@dematerre.be</a></li>
+            <li><strong>Par formulaire :</strong> <a href="contact.html">Formulaire de contact</a></li>
+          </ul>
+
+          <p>Nous nous engageons à vous répondre dans un délai de 5 jours ouvrables et à traiter votre demande dans les meilleurs délais.</p>
+
+          <h2>Améliorations continues</h2>
+          <p>L'accessibilité est un processus continu. Nous nous engageons à :</p>
+          <ul>
+            <li>Effectuer des audits réguliers de l'accessibilité</li>
+            <li>Former notre équipe aux bonnes pratiques d'accessibilité</li>
+            <li>Intégrer l'accessibilité dès la conception de nouvelles fonctionnalités</li>
+            <li>Corriger les problèmes d'accessibilité signalés dans les plus brefs délais</li>
+          </ul>
+
+          <h2>Références et ressources</h2>
+          <p>Pour en savoir plus sur l'accessibilité web :</p>
+          <ul>
+            <li><a href="https://www.w3.org/WAI/WCAG21/quickref/" target="_blank" rel="noopener">WCAG 2.1 - Guide de référence rapide (en anglais)</a></li>
+            <li><a href="https://www.numerique.gouv.fr/publications/rgaa-accessibilite/" target="_blank" rel="noopener">RGAA - Référentiel Général d'Amélioration de l'Accessibilité</a></li>
+            <li><a href="https://accessibilite.public.lu/" target="_blank" rel="noopener">Portail de l'accessibilité numérique au Luxembourg</a></li>
+          </ul>
+
+          <h2>Procédure de réclamation</h2>
+          <p>Si vous constatez un défaut d'accessibilité vous empêchant d'accéder à un contenu ou une fonctionnalité du site, que vous nous le signalez et que vous ne parvenez pas à obtenir une réponse satisfaisante, vous êtes en droit de faire parvenir vos doléances ou une demande de saisine à :</p>
+
+          <p><strong>Défenseur des droits (pour la France)</strong><br>
+          Libre d'accès au 09 69 39 00 00<br>
+          Via le <a href="https://formulaire.defenseurdesdroits.fr/" target="_blank" rel="noopener">formulaire de contact en ligne</a><br>
+          <a href="https://www.defenseurdesdroits.fr/" target="_blank" rel="noopener">www.defenseurdesdroits.fr</a></p>
+
+          <p><strong>Pour la Belgique :</strong><br>
+          <a href="https://www.unia.be/" target="_blank" rel="noopener">Unia - Centre interfédéral pour l'égalité des chances</a></p>
+
+          <div class="mt-xl">
+            <a href="index.html" class="btn btn-primary">
+              <i class="fas fa-arrow-left" aria-hidden="true"></i>
+              Retour à l'accueil
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <img src="images/logo/dematerre-logo.svg" alt="Logo DemaTerre" width="150" height="auto">
+          <p>Entreprise familiale basée à Sombreffe, proche de la nature et de ses clients.</p>
+        </div>
+
+        <div class="footer-col">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="amenagement-parcs-jardins.html">Aménagement parcs & jardins</a></li>
+            <li><a href="abattage-elagage.html">Abattage & Élagage</a></li>
+            <li><a href="travaux-forestiers-agricoles.html">Travaux forestiers & agricoles</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Contact</h3>
+          <ul>
+            <li>Tél : <a href="tel:+32488067063">0488 06 70 63</a></li>
+            <li>Email : <a href="mailto:info@dematerre.be">info@dematerre.be</a></li>
+            <li>Belgique - Brabant wallon & Namur</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          © 2025 DemaTerre - BE 0554.656.490 |
+          <a href="mentions-legales.html">Mentions légales</a> |
+          <a href="politique-confidentialite.html">Confidentialité</a> |
+          <a href="accessibilite.html">Accessibilité</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <script>
+    $(document).ready(function(){
+      // Navigation mobile
+      $('.nav-toggle').click(function(){
+        const $toggle = $(this);
+        const $navMobile = $('#nav-mobile');
+        const isExpanded = $toggle.attr('aria-expanded') === 'true';
+
+        $toggle.toggleClass('active');
+        $toggle.attr('aria-expanded', !isExpanded);
+        $toggle.attr('aria-label', isExpanded ? 'Ouvrir le menu de navigation' : 'Fermer le menu de navigation');
+
+        $navMobile.toggleClass('active');
+      });
+
+      // Fermer le menu mobile en cliquant sur un lien
+      $('.nav-mobile a').click(function(){
+        $('.nav-toggle').removeClass('active').attr('aria-expanded', 'false');
+        $('#nav-mobile').removeClass('active');
+      });
+
+      // Fermer le menu mobile en cliquant ailleurs
+      $(document).click(function(e) {
+        if (!$(e.target).closest('.header').length) {
+          $('.nav-toggle').removeClass('active').attr('aria-expanded', 'false');
+          $('#nav-mobile').removeClass('active');
+        }
+      });
+    });
+
+    // Gestion du focus pour accessibilité
+    document.addEventListener('DOMContentLoaded', function() {
+      const skipLink = document.querySelector('.skip-link');
+      if (skipLink) {
+        skipLink.addEventListener('click', function(e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.focus();
+            target.scrollIntoView({ behavior: 'smooth' });
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>

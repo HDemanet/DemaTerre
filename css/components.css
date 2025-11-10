@@ -1,28 +1,22 @@
 /* =========================
-   COMPONENTS.CSS - Version sobre DemaTerre
-   Navbar hybride avec CTA cohérent et adaptation intelligente
+   COMPONENTS.CSS
    ========================= */
 
 /* =========================
-   HEADER & NAVIGATION HYBRIDE
+   HEADER & NAVIGATION - FOND SOLIDE
    ========================= */
 .header {
-  background: rgba(254, 254, 254, 0.95);  /* Fond semi-transparent */
-  backdrop-filter: blur(10px);            /* Effet de flou pour la lisibilité */
-  -webkit-backdrop-filter: blur(10px);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  background: #FFFFFF !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
   z-index: var(--z-sticky);
-  border-bottom: 1px solid rgba(225, 229, 233, 0.6);
+  border-bottom: 1px solid #E1E5E9;
   transition: var(--transition);
 }
 
-/* Header avec fond plein quand on scroll */
 .header.scrolled {
-  background: var(--color-bg);
-  backdrop-filter: none;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15) !important;  /* Juste une ombre */
 }
 
 .header .container {
@@ -41,7 +35,6 @@
   width: 100%;
 }
 
-/* Logo adaptatif selon le layout */
 .logo {
   display: flex;
   align-items: center;
@@ -57,11 +50,10 @@
 
 .logo img {
   height: auto;
-  max-height: 60px;  /* Taille par défaut */
+  max-height: 60px;
   width: auto;
 }
 
-/* Navigation principale */
 .nav {
   display: flex;
 }
@@ -69,7 +61,7 @@
 .nav-list {
   display: flex;
   list-style: none;
-  gap: var(--spacing-md);
+  gap: var(--spacing-sm);  /* Espacement réduit pour tout rentrer */
   margin: 0;
   padding: 0;
 }
@@ -89,37 +81,34 @@
   min-height: 44px;
   display: flex;
   align-items: center;
-  font-size: 1rem;  /* Taille normale cohérente */
+  font-size: 0.95rem;  /* Légèrement réduit pour tout rentrer */
   white-space: nowrap;
 }
 
 .nav-list a:hover,
 .nav-list a:focus {
   color: var(--color-primary);
-  background: rgba(58, 95, 41, 0.1);   /* Fond vert clair cohérent */
-  text-decoration: none;  /* Pas de soulignement */
+  background: rgba(58, 95, 41, 0.1);
+  text-decoration: none;
 }
 
 .nav-list a.active {
-  color: var(--color-primary);
+  color: white;
   font-weight: 600;
-  background: rgba(58, 95, 41, 0.15);  /* Fond vert clair plus marqué */
-  border: 1px solid rgba(58, 95, 41, 0.2);  /* Bordure subtile */
+  background: var(--color-primary);  /* Fond vert pour page active */
 }
 
-/* CTA header avec design cohérent */
 .cta-header {
   display: flex;
   align-items: center;
   gap: var(--spacing-sm);
 }
 
-/* Téléphone stylé comme bouton outline pour cohérence */
 .cta-header .phone-number {
   color: var(--color-primary);
   font-weight: 600;
   text-decoration: none;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   padding: var(--spacing-sm) var(--spacing-md);
   border-radius: var(--radius);
   transition: var(--transition);
@@ -127,7 +116,7 @@
   align-items: center;
   gap: var(--spacing-xs);
   background: transparent;
-  border: 2px solid var(--color-primary);  /* Même style que btn-outline */
+  border: 2px solid var(--color-primary);
   min-height: 44px;
 }
 
@@ -138,86 +127,27 @@
 }
 
 .cta-header .btn {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   padding: var(--spacing-sm) var(--spacing-md);
   font-weight: 600;
-  min-height: 44px;  /* Même hauteur que phone-number */
+  min-height: 44px;
 }
 
 /* =========================
-   LAYOUT ADAPTATIF SELON ÉCRAN
+   LAYOUT ADAPTATIF - SIMPLIFIÉ
    ========================= */
 
-/* Écrans moyens : Navigation sur deux lignes */
-@media (min-width: 1024px) and (max-width: 1350px) {
-  .header-content {
-    flex-direction: column;
-    gap: var(--spacing-sm);
-  }
-
-  .header-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-  }
-
-  .nav {
-    order: 3;
-    width: 100%;
-    justify-content: center;
-    margin-top: var(--spacing-xs);
-  }
-
+/* Grands écrans : tout sur une ligne */
+@media (min-width: 1200px) {
   .logo img {
-    max-height: 70px;  /* Logo plus grand */
+    max-height: 65px;
   }
 
   .nav-list {
-    gap: var(--spacing-lg);  /* Espacement généreux */
-  }
-
-  .nav-list a {
-    font-size: 1rem;  /* Taille normale */
-    padding: var(--spacing-sm) var(--spacing-md);
-  }
-
-  .cta-header {
-    gap: var(--spacing-md);  /* Plus d'espace */
-  }
-
-  .cta-header .phone-number,
-  .cta-header .btn {
-    font-size: 1rem;  /* Taille normale */
-  }
-
-  .header .container {
-    min-height: auto;
-    padding: var(--spacing-sm) 0;
-  }
-}
-
-/* Grands écrans : Une ligne avec logo très grand */
-@media (min-width: 1351px) {
-  .logo img {
-    max-height: 75px;  /* Logo très grand */
-  }
-
-  .nav-list {
-    gap: var(--spacing-lg);
-  }
-
-  .nav-list a {
-    font-size: 1rem;
-    padding: var(--spacing-sm) var(--spacing-lg);
-  }
-
-  .cta-header {
     gap: var(--spacing-md);
   }
 
-  .cta-header .phone-number,
-  .cta-header .btn {
+  .nav-list a {
     font-size: 1rem;
     padding: var(--spacing-sm) var(--spacing-lg);
   }
@@ -285,18 +215,15 @@
   top: 0;
 }
 
-/* Navigation mobile avec fond lisible */
 .nav-mobile {
   display: none;
   position: absolute;
   top: 100%;
   left: 0;
   right: 0;
-  background: rgba(254, 254, 254, 0.98);
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
+  background: #FFFFFF;  /* Fond blanc solide */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  border-top: 1px solid rgba(225, 229, 233, 0.8);
+  border-top: 1px solid #E1E5E9;
   z-index: var(--z-dropdown);
 }
 
@@ -319,6 +246,11 @@
 
 .nav-mobile .nav-list li:last-child a {
   border-bottom: none;
+}
+
+.nav-mobile .nav-list a.active {
+  color: white;
+  background: var(--color-primary);
 }
 
 .nav-mobile-contact {
@@ -535,17 +467,17 @@
 .service-card .link:hover,
 .service-card .link:focus {
   color: var(--color-primary);
-  background: rgba(58, 95, 41, 0.1);  /* Fond vert clair cohérent */
+  background: rgba(58, 95, 41, 0.1);
   text-decoration: none;
 }
 
 .service-card .link i {
-  font-size: 0.8rem;  /* Flèche plus petite */
+  font-size: 0.8rem;
   transition: var(--transition);
 }
 
 .service-card .link:hover i {
-  transform: translateX(2px);  /* Mouvement subtil */
+  transform: translateX(2px);
 }
 
 /* =========================
@@ -785,6 +717,11 @@
     display: none;  /* Masquer numéro sur tablette */
   }
 
+  .nav-list a {
+    font-size: 0.85rem;
+    padding: var(--spacing-xs) var(--spacing-sm);
+  }
+
   .services-grid,
   .atouts-grid {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -803,7 +740,7 @@
   }
 
   .cta-header {
-    display: none;  /* Masquer CTA sur mobile */
+    display: none;
   }
 
   .header .container {
