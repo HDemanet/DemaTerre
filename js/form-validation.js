@@ -154,68 +154,6 @@
     return true;
   }
 
-  // Envoyer le formulaire
-  function sendForm(formData) {
-    const submitBtn = document.querySelector('#contactForm button[type="submit"]');
-    const originalText = submitBtn.innerHTML;
-
-    // Désactiver le bouton et afficher loader
-    submitBtn.disabled = true;
-    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Envoi en cours...';
-
-    // Simulation d'envoi (REMPLACER par votre backend réel)
-    setTimeout(function() {
-      // Masquer le formulaire
-      document.getElementById('contactForm').style.display = 'none';
-
-      // Afficher le message de succès
-      const successMessage = document.getElementById('form-success');
-      if (successMessage) {
-        successMessage.style.display = 'flex';
-      }
-
-      // Scroll vers le message de succès
-      successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
-
-      // Log pour debug (à supprimer en production)
-      console.log('Formulaire envoyé:', {
-        nom: formData.get('nom'),
-        prenom: formData.get('prenom'),
-        email: formData.get('email'),
-        telephone: formData.get('telephone'),
-        ville: formData.get('ville'),
-        service: formData.get('service'),
-        message: formData.get('message'),
-        rgpd: formData.get('rgpd'),
-        date: new Date().toISOString()
-      });
-
-      /*
-      // DÉCOMMENTER et ADAPTER pour envoi réel via backend
-      fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(Object.fromEntries(formData))
-      })
-      .then(response => response.json())
-      .then(data => {
-        // Succès
-        document.getElementById('contactForm').style.display = 'none';
-        document.getElementById('form-success').style.display = 'flex';
-      })
-      .catch(error => {
-        // Erreur
-        alert('Une erreur est survenue. Veuillez réessayer ou nous contacter par téléphone.');
-        submitBtn.disabled = false;
-        submitBtn.innerHTML = originalText;
-      });
-      */
-
-    }, 2000);
-  }
-
   // Initialiser la validation
   document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('contactForm');
@@ -257,13 +195,8 @@
       });
     }
 
-    // Soumission du formulaire
+    // Validation avant soumission (sans empêcher Formspree)
     form.addEventListener('submit', function(e) {
-      e.preventDefault();
-
-      // Effacer toutes les erreurs précédentes
-      clearAllErrors();
-
       // Valider tous les champs
       const isNomValid = validateNom();
       const isPrenomValid = validatePrenom();
@@ -273,22 +206,18 @@
       const isMessageValid = validateMessage();
       const isRGPDValid = validateRGPD();
 
-      // Si tout est valide
-      if (isNomValid && isPrenomValid && isEmailValid && isTelValid &&
-          isServiceValid && isMessageValid && isRGPDValid) {
+      // Si validation échoue, empêcher la soumission
+      if (!(isNomValid && isPrenomValid && isEmailValid && isTelValid &&
+            isServiceValid && isMessageValid && isRGPDValid)) {
+        e.preventDefault();
 
-        // Créer FormData
-        const formData = new FormData(form);
-
-        // Envoyer le formulaire
-        sendForm(formData);
-      } else {
         // Scroll vers la première erreur
         const firstError = document.querySelector('.error');
         if (firstError) {
           firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
       }
+      // Sinon, laisser jQuery dans main.js gérer l'envoi Formspree
     });
   });
 
