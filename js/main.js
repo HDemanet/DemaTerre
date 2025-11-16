@@ -1,8 +1,3 @@
-/* =========================
-   MAIN.JS - JavaScript principal
-   Navigation smooth scroll et menu mobile
-   ========================= */
-
 $(document).ready(function() {
 
   // ========== NAVIGATION MOBILE ==========
@@ -33,18 +28,15 @@ $(document).ready(function() {
   });
 
   // ========== SMOOTH SCROLL ==========
-  // Scroll fluide vers les sections
   $('a[href^="#"]').on('click', function(e) {
     const target = $(this.getAttribute('href'));
 
     if (target.length) {
       e.preventDefault();
 
-      // Fermer le menu mobile si ouvert
       $('.nav-toggle').removeClass('active').attr('aria-expanded', 'false');
       $('#nav-mobile').removeClass('active');
 
-      // Calculer la position avec offset pour le header
       const headerHeight = $('.header').outerHeight();
       const targetPosition = target.offset().top - headerHeight;
 
@@ -55,7 +47,6 @@ $(document).ready(function() {
   });
 
   // ========== ACTIVE SECTION HIGHLIGHT ==========
-  // Mettre en évidence la section active dans le menu
   $(window).on('scroll', function() {
     const scrollPosition = $(window).scrollTop();
     const headerHeight = $('.header').outerHeight();
@@ -73,7 +64,6 @@ $(document).ready(function() {
   });
 
   // ========== SKIP LINK ==========
-  // Gestion du skip link pour accessibilité
   $('.skip-link').on('click', function(e) {
     e.preventDefault();
     const target = $(this.getAttribute('href'));
